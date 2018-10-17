@@ -1,13 +1,14 @@
 import java.awt.*;
 import java.util.Random;
 import javax.swing.JFrame;
+import java.util.Scanner;
 
-public class GUI extends JFrame {
+public class Fill_Poly extends JFrame {
 
-    public int x0 = 200;
-    public int y0 = 300;
-    public int r = 100;
-    public int N = 20;
+    public static int x0;
+    public static int y0;
+    public static int r;
+    public static int N;
 
     public int Lean(double x, double y) {
         int lean;
@@ -20,7 +21,7 @@ public class GUI extends JFrame {
         return lean;
     }
 
-    public GUI() {
+    public Fill_Poly() {
         super("simpleApp");
         setSize(700, 600);
         setVisible(true);
@@ -138,6 +139,11 @@ public class GUI extends JFrame {
     }
 
     public static void main(String args[]) {
-        GUI app = new GUI();
+	Scanner in = new Scanner(System.in);
+	x0 = in.nextInt();
+	y0 = in.nextInt();
+	r = in.nextInt();
+	N = in.nextInt();
+        Fill_Poly app = new Fill_Poly();
     }
 }
